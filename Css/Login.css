@@ -4,35 +4,51 @@
         body{
             background-image: linear-gradient(skyblue,white,skyblue);
         }
-        .top-heading{
-            display: flex;
-            justify-content: center;
-            text-align: center;
-            font-size:50px;
-            text-shadow:1px 1px white,3px 3px 2px lime;
-        }
+		.top-heading{
+			text-align:center;
+			font-size:50px;
+			text-shadow:1px 1px white,3px 3px 2px lime;
+		}
         .signin-container{
             padding: 16px;
         }
-        .main-container{
-            display:flex;
-            justify-content: center;
-        }
-        .container-signup{
+		.mid-container{
+			display:flex;
+			justify-content:center;
+		}
+		.mid-signup{
             padding:5%;
             border-radius: 20px;
             margin-right: 5px;
             background-image:linear-gradient(Red,orange);
-			min-width:200px;
         }
-        .container-signin{
+        .mid-signin{
             padding:5%;
             border-radius: 20px;
             margin-left: 5px;
             background-image:linear-gradient(crimson,red);
         }
+		@media screen and (max-width:531px){
+			.top-heading{
+				font-size:30px;
+			}
+			.mid-container{
+				display:flex;
+				flex-flow:column;
+				margin-left:10%;
+				margin-right:10%;
+			}
+			.mid-signup{
+				margin-bottom:5px;
+				margin-right:0px;
+			}
+			.mid-signin{
+				margin-top:5px;
+				margin-left:0px;
+			}
+		}
         .btn{
-            background-color: #f1f1f1;
+			background-color: #f1f1f1;
             color:black;
             border:none;
             padding:15px 32px;
@@ -44,14 +60,13 @@
             margin-top: 30%;
             border-radius:10px;
         }
-        .container-top{
+        .mid-container h1{
             color:white;            
         }
-        .container-para{
+        .mid-container span{
             color:white;
             text-align: center;
-            text-justify: auto;
-            
+			text-justify:auto;
         }
         .footer{
             display: block;
@@ -72,11 +87,10 @@
             position: relative;
             left: 8px;
             display: block;
-            justify-content: center;
             font-size: 18px;
-            color:black;
+            color:lightgray;
             font-weight:bold;
-            text-shadow: .5px .5px white;
+			margin-right:10px;
         }
       /*------------------------------------------------------------*/
         .modal{
