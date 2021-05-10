@@ -6,18 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome</title>
     <link rel="stylesheet" href="Css\Login.css"> 
+	<script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-replace-svg="nest"></script>
 </head>
 <body>
      <div class="top-heading">
      <h1>Welcome to our platform</h1>
     </div>
-    <div class="mid-container">
+    <div class="mid-container anim-signin-up">
         <div class="mid-signup">
             <h1>Hello Friends !</h1>
             <span>New to this site ? Lets sign up.</span>
             <div><button  class="btn" onclick="document.getElementById('id02').style.display='block'">Sign up</button></div>
         </div>
-		<div class="mid-signin">
+		<div class="mid-signin anim-signin-up">
             <h1>Welcome Users!</h1>
             <span>Lets sign in and be connected.</span>
             <div><button  class="btn" onclick="document.getElementById('id01').style.display='block'">Sign in</button></div>
@@ -44,12 +45,13 @@
         <div id="id01" class="modal">
             <form class="signin-content animate">
                 <div class="img-container">
-                    <span class="close" title="Close-modal">&times;</span>
+                    <span class="close" title="Close-modal" onclick="document.getElementById('id01').style.display='none'">&times;</span>
                     <img src="Images\avatar.png" alt="Avatar" class="avatar"><br>
                     <h2>Member Login</h2>
                 </div>
                 <div class="signin-container">
                     <label for="email">Email : </label>
+					<i class="fas fa-envelope"></i>
                     <input type="email" name="email" placeholder="Email" required/>
                     <label for="password">Password : </label>
                     <input type="password" name="password" placeholder="Password" required/>
@@ -69,7 +71,7 @@
         <div id="id02" class="modal">
             <form class="signin-content animate">
                 <div class="img-container">
-                    <span class="close" title="close">&times;</span>
+                    <span class="close" title="close" onclick="document.getElementById('id02').style.display='none'">&times;</span>
                     <img src="Images\avatar.png" alt="Avatar" class="avatar"><br>
                     <h2>Create new account</h2>
                 </div>

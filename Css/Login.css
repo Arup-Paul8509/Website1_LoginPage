@@ -19,14 +19,24 @@
 		.mid-signup{
             padding:5%;
             border-radius: 20px;
-            margin-right: 5px;
+            margin-right: 2%;
             background-image:linear-gradient(Red,orange);
+			box-shadow:5px 5px 10px gray,1px 1px 3px black;
+			animation-name:swap1;
+			animation-duration:6s;
+			animation-delay:3s;
+			animation-iteration-count:infinite;
         }
         .mid-signin{
             padding:5%;
             border-radius: 20px;
-            margin-left: 5px;
+            margin-left: 2%;
             background-image:linear-gradient(crimson,red);
+			box-shadow:5px 5px 10px gray,1px 1px 3px black;
+			animation-name:swap2;
+			animation-duration:6s;
+			animation-delay:3s;
+			animation-iteration-count:infinite;
         }
 		@media screen and (max-width:531px){
 			.top-heading{
@@ -39,18 +49,21 @@
 				margin-right:10%;
 			}
 			.mid-signup{
-				margin-bottom:5px;
+				margin-bottom:3%;
 				margin-right:0px;
+				
 			}
 			.mid-signin{
-				margin-top:5px;
+				margin-top:3%;
 				margin-left:0px;
 			}
 		}
         .btn{
 			background-color: #f1f1f1;
             color:black;
-            border:none;
+            border:3px solid #ccc;
+			border-left:3px solid #fff;
+			border-top:3px solid #fff;
             padding:15px 32px;
             text-align: center;
             text-decoration: none;
@@ -58,15 +71,18 @@
             font-size: 16px;
             position: relative;
             margin-top: 30%;
-            border-radius:10px;
+            border-radius:25px;
+			box-shadow:1px 1px 5px gray;
         }
         .mid-container h1{
-            color:white;            
+            color:white;  
+			text-shadow:1.5px 1.5px black;
         }
         .mid-container span{
             color:white;
             text-align: center;
 			text-justify:auto;
+			font-size:16px;
         }
         .footer{
             display: block;
@@ -82,16 +98,32 @@
             left:5px;
             font-size: 30px;
             color:black;
+			text-shadow:1px 1px lightgray;
         }
         .footer-para{
             position: relative;
             left: 8px;
             display: block;
-            font-size: 18px;
+            font-size: 16px;
             color:lightgray;
-            font-weight:bold;
 			margin-right:10px;
         }
+		@-webkit-keyframes swap1{
+			from{ background-image:linear-gradient(Red,orange);}
+			to{background-image:linear-gradient(crimson,red);}
+		}
+		@-webkit-keyframes swap2{
+			from{background-image:linear-gradient(crimson,red);}
+			to{ background-image:linear-gradient(Red,orange);}
+		}
+		@keyframes swap1{
+			from{ background-image:linear-gradient(Red,orange);}
+			to{background-image:linear-gradient(crimson,red);}
+		}
+		@keyframes swap2{
+			from{background-image:linear-gradient(crimson,red);}
+			to{ background-image:linear-gradient(Red,orange);}
+		}
       /*------------------------------------------------------------*/
         .modal{
             display:none;
@@ -115,8 +147,7 @@
         .img-container{
             text-align:center;
             position:relative;
-            margin:24px 0 12px 0;
-           
+            margin:24px 0 12px 0;           
         }
         img.avatar{
             width:20%;
@@ -138,7 +169,7 @@
             border:none;
             cursor:pointer;
             width:100%;
-            border-radius:10px;
+            border-radius:20px;
         }
         button:hover{
             opacity:0.8;
