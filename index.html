@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome</title>
-    <link rel="stylesheet" href="Css\Login.css"> 
+    <link rel="stylesheet" href="Css\Login.css"/> 
 </head>
 <body>
      <div class="top-heading">
@@ -42,7 +42,7 @@
         </div>
         <!------------------------------------------------------------------------------------------------------------------------->
         <div id="id01" class="modal">
-            <form class="signin-content animate">
+            <form class="signin-content animate" action="./php/signin_database.php" method="POST">
                 <div class="img-container">
                     <span class="close" title="Close-modal" onclick="document.getElementById('id01').style.display='none'">&times;</span>
                     <img src="Images\avatar.png" alt="Avatar" class="avatar"><br>
@@ -67,7 +67,7 @@
         </div>
         <!----------------------------------------------------------------------------------------------------------------------------->
         <div id="id02" class="modal">
-            <form class="signin-content animate">
+            <form class="signin-content animate" onsubmit="return check_password()" action="./php/signup_database.php" method="POST">
                 <div class="img-container">
                     <span class="close" title="close" onclick="document.getElementById('id02').style.display='none'">&times;</span>
                     <img src="Images\avatar.png" alt="Avatar" class="avatar"><br>
@@ -79,9 +79,9 @@
                     <label for="email">Email : </label>
                     <input type="email" name="email" placeholder="Email" required/>
                     <label for="createpassword">Create Password : </label>
-                    <input type="password" name="createpassword" placeholder="Create Password" required/>
-                    <label for="createpassword">Confirm Password : </label>
-                    <input type="password" name="confirmpassword" placeholder="Confirm Password" required/>
+                    <input type="password" name="createpassword" placeholder="Create Password" id="pwd" required/>
+                    <label for="confirmpassword">Confirm Password : </label>
+                    <input type="password" name="confirmpassword" placeholder="Confirm Password" id="cpwd" required/>
                     <button type="submit" class="button">Sign up</button>
                     <button type="reset" class="button">Reset</button>
                 </div>
@@ -92,16 +92,6 @@
             </form>
         </div>
 </body>
-<script>
-        var modal1=document.getElementById('id01');
-        var modal2=document.getElementById('id02');
-        window.onclick=function(event){
-            if(event.target==modal1){
-                modal1.style.display='none';
-            }
-            if(event.target==modal2){
-                modal2.style.display='none';
-            }
-        }
+<script type="text/javascript" src="./JavaScript/jsfile.js">
 </script>
 </html>
